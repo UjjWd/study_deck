@@ -29,7 +29,7 @@ router.post('/generate', async (req, res) => {
     await OTP.deleteOne({ email });
 
     // Create new OTP record
-    const newOTP = new OTP({
+    const newOTP = new OTP
       email,
       code: otp,
       expiresAt
